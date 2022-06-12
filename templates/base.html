@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>MyAi</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static',filename='images/logo_name.png')}}" alt="" width="250" height="90">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{{ url_for('index') }}">Home <span class="sr-only"></span></a>
+                <a class="nav-item nav-link" href="{{ url_for('faceapp') }}">FaceRecognitionApp</a>
+            </div>
+            </div>
+        </nav>
+    </div> 
+    
+    {% block bodyblock  %}
+
+    
+
+    {% endblock  %}
+
+        
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container"> 
+        <img src="{{ url_for('static',filename='images/logo_black.png')}}" alt="" width="250" height="90">
+
+        <p align="center"><span style="color: gray">
+            Copyrights © MyAi All Rights Reserved
+        </span> 
+        </p>
+    </div> 
+</footer>
+
+<style>
+    .footer{
+        position: fixed;
+        left:0;
+        bottom:0;
+        width: 100%;
+        background-color: #344494;
+        padding-top:30px;
+        padding-bottom:10px;
+    };
+    .content{
+        color:#002f4d;
+    };
+</style> 
+
+
+
+</body>
+</html>
